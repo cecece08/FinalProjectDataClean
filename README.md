@@ -34,13 +34,21 @@ The dataset includes the following files:
 
 - 'codebook.txt' : shows infomation about the code which used to get data and clean it into required tidy dataset
 
+-' meansdata_tidy.txt: tidy dataset with the averaged value for each subject, each activity as well as each features (standard deviation and mean of features)
+
+- run_analysis.R : R code for getting a tidy dataset
+==================================================
+other required files, you can download them from
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+you can get detailed info from
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+==========================================
+
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 
 - 'features.txt': List of all features.
 
 - 'activity_labels.txt': Links the class labels with their activity name.
-
--' meansdata_tidy.csv: tidy dataset with the averaged value for each subject, each activity as well as each features (standard deviation and mean of features)
 
 - 'train/X_train.txt': Training set.
 
