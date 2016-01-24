@@ -1,0 +1,44 @@
+Data 1/24/2016 1:41:56
+shows infomation about the code which used to get data and clean it into required tidy dataset
+*****************************
+variables in code
+*****************************
+testdata : X_test.txt, test dataset
+traindata : X_train.txt, train dataset
+testlabel : y_test.txt, test labels
+trainlabel : y_train.txt, train labels
+alllabel : merge test and train labels
+alldata : merge test and train dataset
+features : get features' name
+mean_index : the index number for features with key work "mean"
+deviation_index: the index number for features with key work "deviation"
+index : the index number for features with key work "mean" and "deviation" 
+subindex : get index number for subset with "mean" and "deviation" related features
+newset : new dataset only including "mean" and "deviation" related features
+newfeatures : only including "mean" and "deviation" related features' name
+activities : name of activities and their id in dataset
+named_act : get id in the dataset and get its related activity name
+activities : activities names correspond to each record in the dataset
+testsub: test subjects
+trainsub: train subjects
+subject : all subjects
+mean_sub : data for each time of observation with all required features, subjects and activities
+mean_all : tidy dataset
+******************
+work flow
+****************************
+1. Merges the training and the test sets to create one data set.
+ 1)read data from file including data set(***data) and activity label (***label)
+ 2)merge data set (train and test) together
+2.Extracts only the measurements on the mean and standard deviation for each measurement.
+ 1)read name of variables and get required variables (mean and std)
+ 2)get new data set with only required variables (std and mean)
+3.Uses descriptive activity names to name the activities in the data set
+ 1)read name of activities and rename the activities
+4.Appropriately labels the data set with descriptive variable names.
+5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+ 1)read data
+ 2)merge all together including subject and activity
+ 3)reshape into desired table
+   for each subject and each activity, loop over to get all matched observation and get the average for all features, then write into table, and get the next one.
+
